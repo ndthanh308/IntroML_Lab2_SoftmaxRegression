@@ -4,7 +4,7 @@ import urllib.request
 import matplotlib.pyplot as plt
 
 # --- 1. DATA LOADING & PROCESSING ---
-def load_mnist_data(data_path='data/raw/mnist.npz'):
+def load_mnist_data(data_path='../data/raw/mnist.npz'):
     """
     Tải và load dữ liệu MNIST, trả về vector phẳng (flatten).
     
@@ -69,7 +69,7 @@ def one_hot_encode(y, num_classes=10):
         one_hot[i, y[i]] = 1
     return one_hot
 
-# --- 2. EVALUATION METRICS (Manual Implementation) ---
+# --- 2. EVALUATION METRICS ---
 def compute_confusion_matrix(y_true, y_pred, num_classes=10):
     """
     Tính Confusion Matrix bằng Numpy.
@@ -77,7 +77,7 @@ def compute_confusion_matrix(y_true, y_pred, num_classes=10):
     Args:
         y_true (np.ndarray): Nhãn thực tế, shape (m,), giá trị [0, num_classes-1]
         y_pred (np.ndarray): Nhãn dự đoán, shape (m,), giá trị [0, num_classes-1]
-        num_classes (int): Số lượng classes. Mặc định: 10
+        num_classes (int): Số lượng classes. Mặc định: 10 cho MNIST
     
     Returns:
         np.ndarray: Confusion matrix, shape (num_classes, num_classes)
