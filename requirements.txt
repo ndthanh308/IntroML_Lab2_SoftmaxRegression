@@ -4,4 +4,7 @@ matplotlib
 opencv-python
 seaborn
 ipywidgets
+streamlit
+streamlit-drawable-canvas
+pillow
 
