@@ -10,8 +10,6 @@ Features:
 - Hiển thị xác suất dự đoán
 - Giao diện đẹp, trực quan
 
-Author: Your Name
-Date: December 2025
 """
 
 import streamlit as st
